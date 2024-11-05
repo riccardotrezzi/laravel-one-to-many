@@ -51,6 +51,8 @@ class ProjectController extends Controller
         $project->project_type = $data['project_type'];
         $project->save();
 
+        $project = Project::create($data);
+
         return redirect()->route('admin.project.show', ['project' => $project->id]);
     }
 
@@ -86,6 +88,8 @@ class ProjectController extends Controller
         $project->project_type = $data['project_type'];
         $project->save();
 
+        $project->update($data);
+
         return redirect()->route('admin.project.show', ['project' => $project->id]);
     }
 
@@ -94,7 +98,7 @@ class ProjectController extends Controller
      */
     public function destroy(Project $project)
     {
-        $comic->delete();
+        $project->delete();
         return redirect()->route('admin.projects.index');
     }
 }

@@ -1,11 +1,11 @@
 @extends('layouts.app')
 
-@section('page-title', 'Progetti')
+@section('page-title', 'Modifica' .$project->title)
 
 @section('main-content')
 
 <h1 class="text-center">
-    Crea un nuovo progetto!
+    Modifica {{$project->title}}
 </h1>
 
 @if ($errors->any())
