@@ -28,7 +28,7 @@
                     <tbody>
                         @foreach ($types as $type)
                             <tr>
-                                <th scope="row">{{ $project->id }}</th>
+                                <th scope="row">{{ $type->id }}</th>
                                 <td>{{ $type->name }}</td>
                                 <td>
                                     <a href="{{ route('admin.types.show', ['type' => $type->id]) }}" class="btn btn-primary">
